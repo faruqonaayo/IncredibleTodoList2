@@ -6,11 +6,9 @@ export default function ToDoList({ tasks }) {
   return (
     <ScrollView>
       {tasks.map((t, i) => (
-        <Pressable>
+        <Pressable key={i}>
           <View>
-            <Text key={i} style={styles.taskText}>
-              {t}
-            </Text>
+            <Text style={styles.taskText}>{t}</Text>
           </View>
         </Pressable>
       ))}
